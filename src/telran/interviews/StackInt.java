@@ -1,6 +1,7 @@
 package telran.interviews;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 
@@ -9,9 +10,8 @@ import java.util.NoSuchElementException;
 public class StackInt {
 //TODO fields
 	
-	private List<Integer> stackInt;
-	private int size = 0;
-	private List<Integer> stackMax = new LinkedList<>();
+	private LinkedList<Integer> stackInt;
+	private LinkedList<Integer> stackMax = new LinkedList<>();
 	
 	
 	public StackInt () {
@@ -26,7 +26,6 @@ public class StackInt {
 		if(isMax(num)){
 			stackMax.add(num);
 		}
-		size++;
 		}
 
 	private boolean isMax(int num) {
@@ -34,7 +33,7 @@ public class StackInt {
 		if(stackInt.size()== 1) {
 			res = true;
 		} else {
-			res = stackMax.get(stackMax.size() - 1) < num ? true : false;
+			res = stackMax.getLast() <= num ? true : false;
 		}
 		return res;
 	}
@@ -46,9 +45,9 @@ public class StackInt {
 		if(isEmpty()) {
 			throw new NoSuchElementException();
 		}
-		int elem = stackInt.remove(--size);
-		if(elem == stackMax.get(stackMax.size() - 1)) {
-			stackMax.remove(stackMax.size() - 1);
+		int elem = stackInt.removeLast();
+		if(elem == stackMax.getLast()) {
+			stackMax.removeLast();
 		}
 		return elem;
 	}
@@ -56,16 +55,16 @@ public class StackInt {
 	public boolean isEmpty() {
 		// TODO returns true if stack is empty
 
-		return size == 0  ;
+		return stackInt.size() == 0  ;
 	}
 
 	public int max() {
 		// TODO returns max value existing in the stack
 		//throws NoShuchElementException is the stack is empty
-		if(isEmpty()&& stackMax.isEmpty()) {
+		if(isEmpty()) {
 			throw new NoSuchElementException();
 		}		
-		return stackMax.get(stackMax.size() - 1);
+		return stackMax.getLast();
 	}
 	
 
