@@ -48,7 +48,7 @@ public class MyArray<T> {
 	 * @param value
 	 */
 	public void set(int index, T value) {
-		if (index >= size) {
+		if (index < 0 && index >= size) {
 			throw new IndexOutOfBoundsException("wrong index");
 		}
 		// myArray.merge(index, value, (a,b)-> b);// another way to replace

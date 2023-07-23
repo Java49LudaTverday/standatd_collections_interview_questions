@@ -9,6 +9,7 @@ public class ConnectionsPoolImpl implements ConnectionsPool {
 	
 	public ConnectionsPoolImpl (int limit) {
 		map = new LinkedHashMap<>(16, 0.75f, true ) {
+			@Override//extends LinkedHashMap
 			protected boolean removeEldestEntry (Map.Entry<Integer, Connection> eldestEntry) {
 				return size() > limit;
 			}
