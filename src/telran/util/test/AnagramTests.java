@@ -1,7 +1,7 @@
 package telran.util.test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static telran.interviews.Anagram.isAnagram;
+import static telran.interviews.Anagram_Y.isAnagram;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;

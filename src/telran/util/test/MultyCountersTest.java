@@ -16,7 +16,7 @@ class MultyCountersTest {
 
 	@BeforeEach
 	void setUp() {
-		multiCounters = new MultiCountersImpl();
+		multiCounters = new MultiCountersImpl_Y();
 		multiCounters.addItem("a");
 		multiCounters.addItem("a");
 		multiCounters.addItem("a");

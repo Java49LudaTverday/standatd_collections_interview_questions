@@ -5,16 +5,16 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import telran.interviews.MyArray;
+import telran.interviews.MyArray_Y;
 
 class MyArrayTests {
 	private static final int LENGTH = 1000;
 	private static final int VALUE = 10;
 	private static final int OTHER_VALUE = 5;
-	MyArray<Integer> array;
+	MyArray_Y<Integer> array;
 	@BeforeEach
 	void setUp() throws Exception {
-		array = new MyArray<>(LENGTH);
+		array = new MyArray_Y<>(LENGTH);
 		array.setAll(VALUE);
 	}
 

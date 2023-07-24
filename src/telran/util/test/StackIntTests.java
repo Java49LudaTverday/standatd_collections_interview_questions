@@ -11,7 +11,7 @@ import telran.interviews.*;
 
 class StackIntTests {
 	Integer[] numbers = { 10, 0, 11, 9, 5, 2, 12 };
-	StackInt stack = new StackInt();
+	StackInt_Y stack = new StackInt_Y();
 
 	@BeforeEach
 	void setUp() throws Exception {

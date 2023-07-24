@@ -8,7 +8,7 @@ import java.util.NoSuchElementException;
 
 //All methods have to have the Complexity o[1];
 public class StackInt {
-//TODO fields
+//fields
 	
 	private LinkedList<Integer> stackInt;
 	private LinkedList<Integer> stackMax = new LinkedList<>();
@@ -20,7 +20,6 @@ public class StackInt {
 	
 	
 	public void push(int num) {
-		// TODO
 	// adds a number in the stack				
 		stackInt.add(num);		
 		if(isMax(num)){
@@ -39,7 +38,7 @@ public class StackInt {
 	}
 
 	public int pop() {
-		// TODO takes out and returns the top stack number;
+		//  takes out and returns the top stack number;
 		// in the case the stack is empty the exception of the class
 		// NoSuchElementException should be throws
 		if(isEmpty()) {
@@ -53,13 +52,13 @@ public class StackInt {
 	}
 
 	public boolean isEmpty() {
-		// TODO returns true if stack is empty
+		//  returns true if stack is empty
 
 		return stackInt.size() == 0  ;
 	}
 
 	public int max() {
-		// TODO returns max value existing in the stack
+		// returns max value existing in the stack
 		//throws NoShuchElementException is the stack is empty
 		if(isEmpty()) {
 			throw new NoSuchElementException();

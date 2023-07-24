@@ -20,8 +20,14 @@ public class ConnectionsPoolImpl implements ConnectionsPool {
 	//in the case the Connection Pool is full the eldest connection will be removed
 	@Override
 	public boolean addConnection(Connection connection) {	
+//		map.put(connection.id, connection) == null ? true : false;
+		boolean res = false;
+		if(!map.containsKey(connection.getId())) {
+			res = true;
+			map.put(connection.getId(), connection);
+		}
+		return res;
 		
-		return map.put(connection.id, connection) == null ? true : false;
 	}
 
 	//Connection if exists otherwise null
