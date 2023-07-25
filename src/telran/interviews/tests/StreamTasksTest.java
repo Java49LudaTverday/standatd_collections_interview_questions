@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import static telran.interviews.StreamTasks.*;
 
 class StreamTasksTest {
+	int nNumbers = 1_000_000;
 
 	@BeforeEach
 	void setUp() throws Exception {
@@ -21,9 +22,13 @@ class StreamTasksTest {
 		displayOccurrences(strings);
 	}
 	@Test
+	@Disabled
 	void displayOddEvenGroupingTest() {
 		
 		displayOddEvenGrouping(10);
 	}
-
+	@Test
+	void printDigitStatisticsTest(){
+		printDigitStatistics(nNumbers);
+	}
 }
